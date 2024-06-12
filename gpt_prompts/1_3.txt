@@ -1,0 +1,32 @@
+Below is an observation plan consisting of 14 conditions: "No Finding", "Enlarged Cardiomediastinum", "Cardiomegaly", "Lung Lesion", "Lung Opacity", "Edema", "Consolidation", "Pneumonia", "Atelectasis", "Pneumothorax", "Pleural Effusion", "Pleural Other", "Fracture", "Support Devices".
+
+Based on attached images, assign labels for each condition except "No Finding": "1", "0", "-1", "2". It is noted that "No Finding" is either "2" or "1". These labels have the following interpretation: 1 - The observation was clearly present on the chest X-ray image. 0 -  The observation was absent on the chest X-ray image and was mentioned as negative. -1 - The observation was unclear if it exists. 2 - the observation was absent but not explicitly mentioned.
+
+The first step is to return one list of your assigned labels. For multiple images, assign the labels based on all images and return only one list of labels for the given 14 conditions. 
+
+The second step is to write a report that contains only the FINDINGS and IMPRESSION sections based on labels you choose for each condition.
+
+Your answer is for reference only and is not used for actual diagnosis. Strictly follow the format below to provide your output.
+
+<LABEL>
+[
+("No Finding", "1"|"2"),
+("Enlarged Cardiomediastinum", "0"|"1"|"2"|"-1"), 
+("Cardiomegaly", "0"|"1"|"2"|"-1"),
+("Lung Lesion", "0"|"1"|"2"|"-1"), 
+("Lung Opacity", "0"|"1"|"2"|"-1"), 
+("Edema", "0"|"1"|"2"|"-1"), 
+("Consolidation", "0"|"1"|"2"|"-1"), 
+("Pneumonia", "0"|"1"|"2"|"-1"), 
+("Atelectasis", "0"|"1"|"2"|"-1"), 
+("Pneumothorax", "0"|"1"|"2"|"-1"), 
+("Pleural Effusion", "0"|"1"|"2"|"-1"), 
+("Pleural Other", "0"|"1"|"2"|"-1"), 
+("Fracture", "0"|"1"|"2"|"-1"), 
+("Support Devices", "0"|"1"|"2"|"-1")
+]
+</LABEL>
+<REPORT>
+FINDINGS: <findings>
+IMPRESSION: <impression>
+</REPORT>

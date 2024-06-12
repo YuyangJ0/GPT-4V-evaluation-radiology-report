@@ -1,0 +1,13 @@
+Below is a given observation plan:
+
+<LABEL>
+Positive Conditions: {}
+Negative Conditions: {}
+</LABEL>
+
+Write a report that contains only the FINDINGS and IMPRESSION sections based on given labels rather than images. For positive conditions, you should clearly mention it in the report. For negative conditions, you should clearly mention in the report that there is no clear evidence of this condition. You should not mention any other conditions not listed above. Your answer is for reference only and is not used for actual diagnosis. Strictly follow the format below to provide your output.
+
+<REPORT>
+FINDINGS: <findings>
+IMPRESSION: <impression>
+</REPORT>

@@ -1,0 +1,24 @@
+Below is an observation plan consisting of 14 conditions: "No Finding", "Enlarged Cardiomediastinum", "Cardiomegaly", "Lung Lesion", "Lung Opacity", "Edema", "Consolidation", "Pneumonia", "Atelectasis", "Pneumothorax", "Pleural Effusion", "Pleural Other", "Fracture", "Support Devices".
+
+Based on attached images, assign labels for each condition: "1", "0". If the observation was clearly present on the chest X-ray image, assign “1” to the condition. Otherwise, assign “0” to the condition.
+
+For multiple images, assign the labels based on all images and return only one list of labels for the given 14 conditions. Your answer is for reference only and is not used for actual diagnosis. Strictly follow the format below to provide your output.
+
+<LABEL>
+[
+("No Finding", "0"|"1"),
+("Enlarged Cardiomediastinum", "0"|"1"), 
+("Cardiomegaly", "0"|"1"),
+("Lung Lesion", "0"|"1"), 
+("Lung Opacity", "0"|"1"), 
+("Edema", "0"|"1"), 
+("Consolidation", "0"|"1"), 
+("Pneumonia", "0"|"1"), 
+("Atelectasis", "0"|"1"), 
+("Pneumothorax", "0"|"1""), 
+("Pleural Effusion", "0"|"1"), 
+("Pleural Other", "0"|"1"), 
+("Fracture", "0"|"1"), 
+("Support Devices", "0"|"1")
+]
+</LABEL>
