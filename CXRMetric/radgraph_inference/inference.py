@@ -8,8 +8,6 @@ from tqdm import tqdm
 import argparse
 import sys
 
-# sys.path.append("/data/yuyang/gpt_4v") #
-
 """Code adapted from https://physionet.org/content/radgraph/1.0.0: models/inference.py."""
 
 def preprocess_reports(data_path, start, end, sentence=False, image=False):

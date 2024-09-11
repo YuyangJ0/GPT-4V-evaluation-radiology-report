@@ -30,4 +30,13 @@ if __name__ == '__main__':
 
     assert df_gt.shape[0] == df_gen.shape[0], "The number of rows in df_gt and df_gen are not equal."
 
+    pth_gt = os.path.dirname(args.gt_path)
+    pth_gen = os.path.dirname(args.gen_path)
+    gen_name = args.gen_path.split('/')[-1].split('.')[0]
+
+    pth_gt_new = os.path.join(pth_gt, 'gt_imp_sample_post.csv')
+    pth_gen_new = os.path.join(pth_gen, gen_name+'_post.csv')
+    df_gt.to_csv(pth_gt_new, index=False)
+    df_gen.to_csv(pth_gen_new, index=False)
+
     calc_metric(pth_gt_new, pth_gen_new, args.out_path, use_idf=False)

@@ -25,10 +25,6 @@ RADGRAPH_PATH ='./models/radgraph.tar.gz'
 
 REPORT_COL_NAME = "report"
 STUDY_ID_COL_NAME = "study_id"
-# COLS = ["radgraph_combined", "bertscore", "semb_score", "bleu_score"]
-# COLS = ["radgraph_combined", "bertscore", "bleu_score"]
-# COLS = ["bleu_score", "meteor_score", "rouge_l"]
-# COLS = ["bleu_score", "meteor_score", "rouge_l", "radgraph_combined", "bertscore"]
 COLS = ["bleu_1", "bleu_4", "meteor_score", "rouge_l", "radgraph_combined", "bertscore"] ###
 
 CXR_LABELS = ['Atelectasis','Cardiomegaly', 'Consolidation', 'Edema', \
@@ -229,7 +225,6 @@ def compute_f1(df_gt, df_pred):
     y_pred = label(CHEXBERT_PATH, pred_pre_chexb, use_gpu=True)
     y_pred = np.array(y_pred).T
     y_pred = y_pred[:, :-1] ##
-    pd.DataFrame(y_pred).to_csv("/data/yuyang/gpt_4v/result_openi/metrics/300/1_gen_labels.csv", index=False) ##
 
     y_pred_neg = y_pred.copy()
     y_pred_neg[(y_pred_neg == 1) | (y_pred_neg == 3)] = 0
